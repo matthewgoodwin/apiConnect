@@ -1,0 +1,27 @@
+.finder {
+  text-align: center;
+}
+
+.library-wrapper {
+  display: none;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(244,244,244);
+}
+
+#review-form {
+  display: none;
+}
+
+.movie-poster-self {
+  max-width: 200px;
+  max-height: 350px;
+  width: auto;
+  height: auto;
+} /*auto scales the image by setting a max width/height*/
+
+.search-bar-wrapper {
+  margin:20px;
+  padding: 20px;
+  text-align: center
+}

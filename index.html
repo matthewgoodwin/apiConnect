@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>apiConnect</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <style>*{border: 1px solid red}</style> -->
+</head>
+<body>
+
+<div class="search-bar-wrapper">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12">
+      <h1 class="header">BUILD YOUR LIBRARY</h1>
+      <div class="form-group">
+      <form action="" id="movie-library-form">
+        TITLE: <input type="text" placeholder=" *required" id="movie-title">
+        YEAR: <input type="text" placeholder=" optional" id="movie-year">
+        <button type="submit" class="btn btn-primary" value="Search">SEARCH</button>
+      </form><!--end of the form-->
+      </div><!--end of form-group-->
+    </div><!--offset end-->
+  </div> <!--end of row finder-->
+</div> <!--end of search container-->
+</div><!--end of search-bar-wrapper-->
+
+<div class="library-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8"> <!--start of nest div-->
+        <div class="row" id="1"><!--start nest row-->
+          <div class="col-sm-6" id="movie-img"></div><!--append from app.js-->
+
+        <div class="col-sm-6"><!--start of 2nd nested row-->
+          <div class="row" id="movie-info"></div><!--end of second row id="movie-info"-->
+
+          </div><!--end of col-sm6 second nest-->
+          </div><!--end of nest row id="1"-->
+      </div> <!--end of 1st nest col-8-->
+
+      <div class="col-sm-4"><!--right side of DOM, review movie-->
+        <form id="review-form" action="">
+          <div class="form-group">
+            <label for="review">REVIEW</label>
+            <textarea rows= "4" type="text" class="form-control" id="review"></textarea>
+          </div><!--end of form group-->
+          <div class="form-group">
+            <label for="rating">RATING</label>
+            <input type="text" class="form-control" id="rating" placeholder="e.g., 4.7">
+          </div>
+          <div class="form-group">
+            <label for="tags">TAGS</label>
+            <input type="text" class="form-control" id="tags" placeholder="e.g,, #datenight">
+          </div><!--end of form-group-->
+          <button type="submit" class="btn btn-primary">Add to Shelf</button>
+        </form>
+      </div><!--end of the right side of dom col-sm-4-->
+
+    </div><!--end of imdb movie row div-->
+  </div><!--end of 2nd continer-->
+</div><!--end of library-wrapper-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
