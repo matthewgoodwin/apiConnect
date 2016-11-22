@@ -1,11 +1,25 @@
+.navbar-mustash {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: #85EBBC; /*rgb(133, 235, 188);*/
+  transition: all 0.3s ease;
+  display: flex;
+  height: 70px;
+  padding: 0px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-mustash-brand img {
+  width: 50px;
+}
+
 .finder {
   text-align: center;
 }
 
 .library-wrapper {
   display: none;
-  padding: 20px;
-  margin: 20px;
+  padding: 15px;
+  margin: 15px;
   background-color: rgb(244,244,244);
 }
 
@@ -21,7 +35,14 @@
 } /*auto scales the image by setting a max width/height*/
 
 .search-bar-wrapper {
-  margin:20px;
-  padding: 20px;
+  margin:10px;
+  padding: 10px;
   text-align: center
+}
+.footer {
+  background-color: #383838;
+  height: 35px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
 }

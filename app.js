@@ -6,6 +6,7 @@ $( document ).ready(function() {
     //alert('searching');
     $("#movie-img").empty(); // clear previous image when researching
     $("#movie-info").empty(); // clears previous data when researching
+$("#movie-year").empty(); // clears year from parameter
     $("#review-form").css("display","none");
     $(".library-wrapper").css("display","none");
     var movie = "http://www.omdbapi.com/?t="+$("#movie-title").val();

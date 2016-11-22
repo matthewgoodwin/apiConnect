@@ -11,6 +11,11 @@
     <!-- <style>*{border: 1px solid red}</style> -->
 </head>
 <body>
+<div class="navbar-mustash">
+  <a href="/" class="navbar-mustash-brand">
+    <img src="images/logo.png" />
+  </a>
+</div>
 
 <div class="search-bar-wrapper">
 <div class="container">
@@ -19,7 +24,9 @@
       <h1 class="header">BUILD YOUR LIBRARY</h1>
       <div class="form-group">
       <form action="" id="movie-library-form">
+        <!--<label for="title">TITLE</label>-->
         TITLE: <input type="text" placeholder=" *required" id="movie-title">
+        <!--<label for="year">YEAR</label>-->
         YEAR: <input type="text" placeholder=" optional" id="movie-year">
         <button type="submit" class="btn btn-primary" value="Search">SEARCH</button>
       </form><!--end of the form-->
@@ -34,7 +41,7 @@
     <div class="row">
       <div class="col-sm-8"> <!--start of nest div-->
         <div class="row" id="1"><!--start nest row-->
-          <div class="col-sm-6" id="movie-img"></div><!--append from app.js-->
+          <div class="col-sm-6 col-xs-12" id="movie-img"></div><!--append from app.js-->
 
         <div class="col-sm-6"><!--start of 2nd nested row-->
           <div class="row" id="movie-info"></div><!--end of second row id="movie-info"-->
@@ -44,27 +51,28 @@
       </div> <!--end of 1st nest col-8-->
 
       <div class="col-sm-4"><!--right side of DOM, review movie-->
-        <form id="review-form" action="">
+        <form id="review-form" action="/bookshelf" method="POST">
+        <!--<input type="hidden" name="title" value="<%= %>"> hidden field needed to pass the imdb data-->
           <div class="form-group">
             <label for="review">REVIEW</label>
-            <textarea rows= "4" type="text" class="form-control" id="review"></textarea>
+            <textarea rows= "4" type="text" class="form-control" id="review" name="description"></textarea>
           </div><!--end of form group-->
           <div class="form-group">
             <label for="rating">RATING</label>
-            <input type="text" class="form-control" id="rating" placeholder="e.g., 4.7">
+            <input type="text" class="form-control" id="rating" placeholder="e.g., 4.7" name="rating">
           </div>
           <div class="form-group">
             <label for="tags">TAGS</label>
-            <input type="text" class="form-control" id="tags" placeholder="e.g,, #datenight">
+            <input type="text" class="form-control" id="tags" placeholder="e.g,, #datenight" name="tags">
           </div><!--end of form-group-->
-          <button type="submit" class="btn btn-primary">Add to Shelf</button>
+          <button type="submit" class="btn btn-primary">Add to Shelf and Share</button>
         </form>
       </div><!--end of the right side of dom col-sm-4-->
 
     </div><!--end of imdb movie row div-->
   </div><!--end of 2nd continer-->
 </div><!--end of library-wrapper-->
-
+<footer class="footer"></footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="app.js"></script>
